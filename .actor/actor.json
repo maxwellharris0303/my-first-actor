@@ -1,0 +1,57 @@
+{
+	"actorSpecification": 1,
+	"name": "tax-actor",
+	"title": "Getting started with Python and Selenium",
+	"description": "Scrapes titles of websites using Selenium.",
+	"version": "0.0",
+	"meta": {
+		"templateId": "python-selenium"
+	},
+	"input": "./input_schema.json",
+	"dockerfile": "./Dockerfile",
+	"storages": {
+		"dataset": {
+			"actorSpecification": 1,
+			"title": "APNs",
+			"views": {
+				"titles": {
+					"title": "APNs",
+					"transformation": {
+						"fields": [
+							"apn",
+							"tax_due_2023",
+							"tax_due_2022",
+							"tax_due_2021",
+							"total_tax_due"
+						]
+					},
+					"display": {
+						"component": "table",
+						"properties": {
+							"apn": {
+								"label": "APN",
+								"format": "text"
+							},
+							"tax_due_2023": {
+								"label": "2023 Taxes Due",
+								"format": "text"
+							},
+							"tax_due_2022": {
+								"label": "2022 Taxes Due",
+								"format": "text"
+							},
+							"tax_due_2021": {
+								"label": "2021 Taxes Due",
+								"format": "text"
+							},
+							"total_tax_due": {
+								"label": "Total Taxes Due",
+								"format": "text"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
