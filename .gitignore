@@ -1,7 +1,5 @@
 # This file tells Git which files shouldn't be added to source control
-/.actor
-/.venv
-/storage
+/*.json
 
 .idea
 .DS_Store
